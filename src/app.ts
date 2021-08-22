@@ -5,7 +5,7 @@ import WebSocket from 'ws';
 let wss: WebSocket.Server | undefined;
 
 const startServer = () => {
-  const wsPort = process.env.APP_ENV === 'production' ? 80 : 9090;
+  const wsPort = 9090;
   wss = startSignallingServer(wsPort);
   console.log('Signalling server started');
 };
