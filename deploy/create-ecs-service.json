@@ -1,0 +1,17 @@
+{
+    "cluster": "arn:aws:ecs:us-east-1:824267296635:cluster/backends",
+    "serviceName": "webrtc-server",
+    "taskDefinition": "webrtc-server",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:824267296635:targetgroup/webrtc-server/25363186a4a7b9b4",
+            "containerName": "webrtc-server",
+            "containerPort": 9090
+        }
+    ],
+    "desiredCount": 1,
+    "deploymentConfiguration": {
+        "maximumPercent": 200,
+        "minimumHealthyPercent": 100
+    }
+}
